@@ -1,10 +1,7 @@
 const mongoose = require("mongoose");
 
 const itemSchema = new mongoose.Schema({
-  id: {
-    type: Number,
-    required: true,
-  },
+  
   name: {
     type: String,
     required: true,
@@ -17,20 +14,19 @@ const itemSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  prince: {
+  price: {
     type: Number,
     required: true,
   },
-  itemType: {
-    wear: {
-      type: String,
-      required: true,
-    },
-    catagory: {
-      type: String,
-      required: true,
-    },
+  type: {
+    type: String,
+    required: true,
   },
+  catagory: {
+    type: String,
+    required: true,
+  },
+
   isOnSale: {
     type: Boolean,
     required: true,
@@ -42,4 +38,4 @@ const itemSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Item", itemSchema)
+module.exports = mongoose.model("item", itemSchema);
